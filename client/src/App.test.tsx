@@ -1,9 +1,11 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen , waitFor} from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders the department title', () => {
+
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const linkElement = screen.getByText(/fakelandia justice department/i);
+  waitFor ( ( ) => expect(linkElement).toBeInTheDocument() );
+  
 });

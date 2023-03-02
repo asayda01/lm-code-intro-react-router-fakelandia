@@ -1,5 +1,5 @@
 import React from "react";
 
-const Confession : React.FC = () => <> Confession </>;
+const ComponentConfession : React.FC = () => <> Confession </>;
 
-export default Confession;
+export default ComponentConfession;

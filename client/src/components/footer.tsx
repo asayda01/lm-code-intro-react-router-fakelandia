@@ -1,11 +1,11 @@
 import React from "react";
 
-const Footer : React.FC = () => 
+const ComponentFooter : React.FC = () => 
     
     <footer className="footer">
     
-        <h2> Footer </h2>
+        <h2> Footer © 2023 Cem Saydam</h2>
 
     </footer>
 
-export default Footer;
+export default ComponentFooter;
