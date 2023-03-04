@@ -14,17 +14,26 @@ const ComponentMisdemeanourFilter : React.FC < interfaceMisdemeanourFilterProps 
     return (
 
         <>
-            <h3> Filter Misdemeaour Type : </h3>
-            
-            <select value={misdemeanourSelection}  onChange = { ( event ) => { onChangemisdemeanourSelection (event.target.value) } } >
+            <th>
+
+                <h3> Filter Misdemeaour Type : </h3>
                 
-                <option value = "ALL 🤪 🗣 🥗 😈"> ALL Misdemeanours 🤪 🗣 🥗 😈 </option>
-                <option value = "rudeness 🤪"> Mild Public Rudeness 🤪 </option>
-                <option value = "lift 🗣"> Speaking in a Lift 🗣 </option>
-                <option value = "vegetables 🥗"> Not Eating Your Vegetables 🥗 </option>
-                <option value = "united 😈"> Supporting Manchester United 😈 </option>
+            </th>
+            
+            
+            <th>
+
+                <select value={misdemeanourSelection}  onChange = { ( event ) => { onChangemisdemeanourSelection (event.target.value) } } >
+                
+                    <option value = "ALL 🤪 🗣 🥗 😈"> ALL Misdemeanours 🤪 🗣 🥗 😈 </option>
+                    <option value = "rudeness 🤪"> Mild Public Rudeness 🤪 </option>
+                    <option value = "lift 🗣"> Speaking in a Lift 🗣 </option>
+                    <option value = "vegetables 🥗"> Not Eating Your Vegetables 🥗 </option>
+                    <option value = "united 😈"> Supporting Manchester United 😈 </option>
     
-            </select>
+                </select>
+
+            </th>
     
         </>
     

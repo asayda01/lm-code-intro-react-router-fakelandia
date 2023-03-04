@@ -29,9 +29,9 @@ const ComponentMisdemeanourPage: React.FC = () => {
 
         <>
 
-            <div>
+            <div className='filter'>
+                
 
-                <h1> Misdemeaours </h1>
                 < ComponentMisdemeanourFilter
                     misdemeanourSelection={misdemeanoursFiltered}
                     onChangemisdemeanourSelection={setmisdemeanoursFiltered}
@@ -39,28 +39,45 @@ const ComponentMisdemeanourPage: React.FC = () => {
 
             </div>
 
-            <div>
+            <table className='table'>
 
-                {misdemeanoursFilteredArray.map ( ( misdemeanour ,  index )  => (
+                <thead>
+
+                    <tr>
+
+                        <th> Person        </th>
+                        <th> Citizen ID      </th>
+                        <th> Date            </th>
+                        <th> Misdemeanour    </th>
+                        <th> Punishment Idea </th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    {misdemeanoursFilteredArray.map ( ( misdemeanour ,  index )  => (
                     
-                    <td key={misdemeanour.citizenId}>
+                        <tr key={misdemeanour.citizenId}>
 
-                        <h2> Criminal : {index+1} </h2>
+                            <td> {index+1}                    </td>
+                            <td> {misdemeanour.citizenId}     </td>
+                            <td> {misdemeanour.date}          </td>
+                            <td> {misdemeanour.misdemeanour}  </td>
+                            <td>
+                                <img 
+                                    src={`https://picsum.photos/200/200?random=${Math.floor((Math.random()*1000)+1)}?blur=3`}
+                                    alt="a picture of related punishment" 
+                                />
+                            </td>
 
-                        <p> Citizen ID : {misdemeanour.citizenId}       </p>
-                        <p> Date : {misdemeanour.date}                  </p>
-                        <p> Misdemeanour : {misdemeanour.misdemeanour}  </p>
-                        <p>
-                            <img 
-                                src={`https://picsum.photos/250/250?random=${Math.floor((Math.random()*1000)+1)}?blur=3`}
-                                alt="a picture of related punishment" 
-                            />
-                        </p>
+                        </tr>
+                    ))}
 
-                    </td>
-                ))}
+                </tbody>
 
-            </div>
+            </table>
         
         </>
 

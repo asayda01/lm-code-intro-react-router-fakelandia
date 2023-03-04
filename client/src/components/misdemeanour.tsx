@@ -21,7 +21,7 @@ const ComponentMisdemeanour  : React.FC = () => {
   
     };
   
-    useEffect ( () => {getAaisdemeanour(7)},[]);
+    useEffect ( () => {getAaisdemeanour(3)},[]);
     useContext ( misdemeanoursContextCreator );
 
     return (
