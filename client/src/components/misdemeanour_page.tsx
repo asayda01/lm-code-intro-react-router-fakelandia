@@ -16,7 +16,6 @@ export const misdemeanoursContextCreator = React.createContext<interfaceMisdemea
 const ComponentMisdemeanourPage: React.FC = () => {
 
     const misdemeanours = useContext(misdemeanoursContextCreator);
-
     const [misdemeanoursFiltered , setmisdemeanoursFiltered] = useState<string>("ALL 🤪 🗣 🥗 😈");
 
     const misdemeanoursFilteredArray = misdemeanours.filter( ( misdemeanour ) => {
@@ -30,7 +29,6 @@ const ComponentMisdemeanourPage: React.FC = () => {
         <>
 
             <div className='filter'>
-                
 
                 < ComponentMisdemeanourFilter
                     misdemeanourSelection={misdemeanoursFiltered}
