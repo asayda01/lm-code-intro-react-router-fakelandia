@@ -35,7 +35,7 @@ export function weaklyValidateConfession(body: any) {
 }
 
 export async function handleConfession(confession: ConfessionInput) {
-	if (confession.reason === 'just-talk') {
+	if (confession.reason === 'Just Talk 🕊️☮️🕊️') {
 		console.log(
 			`🗣️ You just want to talk about ${confession.subject}. Thanks! 💜`
 		);

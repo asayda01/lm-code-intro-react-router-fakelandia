@@ -1,34 +1,43 @@
 import React, { useState, useEffect, useContext, Children, ReactElement } from 'react';
+import ComponentConfessionSubject from './confession_subject';
+import ComponentConfessionDetails from './confession_details';
+import ComponentConfessionContact , {interfaceConfesContactProps} from './confession_contact';
+import { MisdemeanourKind, JustTalk } from '../types/misdemeanours.types';
 
-import { interfaceMisdemeanourPageProps , misdemeanoursContextCreator } from './misdemeanour_page';
 
 export interface interfaceConfesTextProps {
 
     confesText:string;
-    
     onChangeConfesText:(event:React.ChangeEvent<HTMLInputElement>)=>void;
 
 };
 
 const ComponentConfession : React.FC = () => {
 
-    const [confesTextComponent, setconfesTextComponent] =  useState (" confes & relax ");
+    const [confesTextSubject, setconfesTextSubject] =  useState (" Type in Subject ");
+    const [confesTextContact, setconfesTextContact] =  useState <MisdemeanourKind | JustTalk> ( "Just Talk 🕊️☮️🕊️" );
+    const [confesTextDetails, setconfesTextDetails] =  useState (" Type in Details ");
 
     return (
+
+        <>
         
-        <> 
+            <form className='form'> 
             
-            <h3> Confession </h3>
+                <p>  It's very difficult to catch people committing misdemeanours so we appreciate it when citizens confess to us directly.            </p>
+                <p>  However, if you're just having a hard day and need to vent then you're welcome to contact us here too 😊. Up to you!              </p>
 
-            <form >
-
-                <input type="submit" value= {confesTextComponent} onChange = { (event)=>setconfesTextComponent(event.target.value) }></input>
+                <tr> <ComponentConfessionSubject  valueSubject={confesTextSubject} onChangeValueSubject = { (event)=>setconfesTextSubject(event) } /> </tr>
+                <tr> <ComponentConfessionContact  valueContact={confesTextContact} onChangeValueContact = { (event)=>setconfesTextContact(event) } /> </tr>
+                <tr> <ComponentConfessionDetails  valueDetails={confesTextDetails} onChangeValueDetails = { (event)=>setconfesTextDetails(event) } /> </tr>
+                <tr> <button type='submit' > Confess </button>                                                                                        </tr>
 
             </form>
 
-        
+            
+
         </>
-    
+
     )
 
 };

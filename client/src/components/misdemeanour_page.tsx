@@ -65,9 +65,8 @@ const ComponentMisdemeanourPage: React.FC = () => {
                             <td> {misdemeanour.misdemeanour}  </td>
                             <td>
                                 <img 
-                                    src={`https://picsum.photos/200/200?random=${Math.floor((Math.random()*1000)+1)}?blur=3`}
-                                    alt="a picture of related punishment" 
-                                />
+                                    src={`https://picsum.photos/200/200?random=${Math.floor((Math.random()*1000)+1)}?blur=2`}
+                                    alt="a picture of related punishment" />
                             </td>
 
                         </tr>

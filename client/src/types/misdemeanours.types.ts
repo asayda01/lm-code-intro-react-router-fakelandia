@@ -6,7 +6,7 @@ export const MISDEMEANOURS = [
 ] as const;
 export type MisdemeanourKind = (typeof MISDEMEANOURS)[number];
 
-export const JUST_TALK = 'just-talk';
+export const JUST_TALK = 'Just Talk 🕊️☮️🕊️';
 export type JustTalk = typeof JUST_TALK;
 
 export type Misdemeanour = {
