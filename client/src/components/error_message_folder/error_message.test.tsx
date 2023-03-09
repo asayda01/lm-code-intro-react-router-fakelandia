@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 
-import ComponentErrorMessage , {interfaceErrorMessageProps} from "./ErrorMessage";
+import ComponentErrorMessage , {interfaceErrorMessageProps} from "./error_message";
 
 describe("Testing for the Error Message component",() => {
 

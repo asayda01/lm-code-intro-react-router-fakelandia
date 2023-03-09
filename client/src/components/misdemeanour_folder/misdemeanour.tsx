@@ -1,10 +1,5 @@
-import React, { useState , useEffect , useContext, Children, ReactElement } from 'react';
-
-import { Misdemeanour } from "../types/misdemeanours.types";
-import ComponentMisdemeanourFilter from './misdemeanour_filter';
-
+import React, { useState , useEffect , useContext } from 'react';
 import ComponentMisdemeanourPage  from './misdemeanour_page';
-
 import { interfaceMisdemeanourPageProps , misdemeanoursContextCreator } from './misdemeanour_page';
 
 

@@ -1,8 +1,7 @@
-import React from "react";
 import { Route, Routes } from "react-router";
 import Home  from "./home";
-import Confession from "./confession";
-import ComponentMisdemeanour from "./misdemeanour";
+import Confession from "./confession_folder/confession";
+import ComponentMisdemeanour from "./misdemeanour_folder/misdemeanour";
 import NotFound from "./notfound";
 import { ComponentMainlayout } from "./mainlayout";
 

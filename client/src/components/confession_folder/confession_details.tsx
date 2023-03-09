@@ -1,5 +1,6 @@
-import React, { useState, useEffect, useContext, Children, ReactElement } from 'react';
-import ComponentErrorMessage from './ErrorMessage';
+import React, { useState } from 'react';
+import ComponentErrorMessage from '../error_message_folder/error_message';
+
 
 export interface interfaceConfesDetailsProps {
 
@@ -12,7 +13,7 @@ const ComponentConfessionDetails : React.FC < interfaceConfesDetailsProps > = ( 
 
     const [errorMessage , setErrorMessage] = useState< string | undefined >('');
     const validate : ( value:string ) => string | undefined = ( value ) => {
-        if ( (value.length<5 ) || (!(/^[a-zA-Z0-9\s]*$/).test(value)) ){
+        if ( (value.length<=5 ) || (!(/^[a-zA-Z0-9\s]*$/).test(value)) ){
             return "ERROR - Details: Must be more than 5 characters."
         };
         return undefined;
@@ -22,7 +23,7 @@ const ComponentConfessionDetails : React.FC < interfaceConfesDetailsProps > = ( 
         
         <> 
             
-            <textarea id="details" value={valueDetails} onChange={(event) => {
+            <textarea rows={10} cols={100} id="details" value={valueDetails} onChange={(event) => {
                                                                                 const errorMessage = validate(event.target.value);
                                                                                 setErrorMessage(errorMessage);
                                                                                 onChangeValueDetails(event.target.value) 
